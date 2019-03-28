@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Branko">
+    <title>Branko's movie database</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    
+</head>
+<body>
+
+    <section class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-10">
+                    <a id="notification" class="notification" title="No new notification">
+                        Alert
+                        <span id="badge" class="badgee">0</span>
+                    </a>
+                    <a id="login">
+                         
+                        Login
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="#" title="Check code for this app on github" target="_blank">Git</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="movie/search.html" title="Search our database">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="movie/add.html" title="Add movie into our database">Add</a>
+                </li>
+            </ul>
+        </nav>
+    </header><!-- Page Header -->
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Fluid jumbotron</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+    </div>
+    
+    <section class="latest-movies">
+        <div class="container">
+            <h3>Latest movies in our collection</h3>
+            <div id="latest-movies" class="row">
+               
+            </div>
+        </div>
+    </section>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <p>Feel free to comment app and send sugestions</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- My JS -->
+    <script src="js/main.js"></script>
+    <script src="js/not.js"></script>
+
+</body>
+</html>

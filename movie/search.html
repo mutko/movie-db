@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Branko">
+    <title>View and search movies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css">
+    
+</head>
+<body>
+
+    <section class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-10">
+                    <button id="notification">notification</button>
+                    
+                    <form action="" id="login">
+                        <input id="user" type="text" placeholder="Username" value="admin" required>
+                        <input id="password" type="password" placeholder="Password" required>
+                        <button id="submit-login" type="submit">Submit</button>
+                    </form>
+
+                </div>
+                <div class="col-2">
+                    <a href="#" title="Check code for this app on github" target="_blank">Git</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="search.html" title="Search our database">Search <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="add.html" title="Add movie into our database">Add</a>
+                </li>
+            </ul>
+        </nav>
+    </header><!-- Page Header -->
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Fluid jumbotron</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            <p>
+                <input type="text" id="search" placeholder="Movie title">
+                
+                <select name="num-to-display" id="num-to-display">
+                    <option value="10">10</option>
+                    <option value="20" selected>20</option>
+                    <option value="40">40</option>
+                    <option value="all">All</option>
+                </select>
+            </p>
+            <p>Sort by year 
+                <button id="yearUp">Gore</button> 
+                <button id="yearDown">Dole</button>
+            </p>
+            <p>Sorb by title 
+                <button id="titleUp">Gore</button> 
+                <button id="titleDown">Dole</button>
+            </p>
+            <section  class="all-movies">
+                <div class="container">
+                    <div class="row" id="all-movies">
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    
+
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <p>Feel free to comment app and send sugestions</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- My JS -->
+    <script src="../js/search.js"></script>
+    <script src="../js/not.js"></script>
+    <script src="../js/delete.js"></script>
+</body>
+</html>
