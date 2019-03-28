@@ -11,11 +11,11 @@ submitLogin.addEventListener('click', function(e) {
     if ( userName.value.toLowerCase() === 'admin' ) {
         alert('Logged in!');
         moviesList = [...moviesList];
-        moviesList.forEach( x => {
-            x.insertAdjacentHTML('afterbegin', `<span class="alert">X</span>`)
-        })
+        moviesList.forEach( x => { // <i class="far fa-times-circle fa-2x"></i>
+            x.insertAdjacentHTML('afterbegin', `<div class="delete-btn" title="Delete this movie"></div>`);
+        });
 
-        alertList = [...document.getElementsByClassName('alert')];
+        alertList = [...document.getElementsByClassName('delete-btn')];
 
         alertList.forEach( x => {
             x.onclick = function(e) {
@@ -30,12 +30,15 @@ submitLogin.addEventListener('click', function(e) {
 });
 
 function deleteMovie(elem) {
+    console.log(elem)
     let warning = confirm('Are you sure? This action can NOT be undone!');
 
     if (warning) {
+
         let link = elem.target.nextElementSibling;
         let movieId = link.href.substring(link.href.length - 24);
 
+        console.log(movieId)
         fetch('https://baza-filmova.herokuapp.com/obrisi-film/', {
             method: 'delete',
             headers: {'Content-Type': 'application/json'},

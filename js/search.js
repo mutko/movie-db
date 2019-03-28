@@ -30,10 +30,12 @@ function displayMovies(moviesArr) {
 
         fill += `
             <div class="movie">
-                <a href="view.html?_id=${movieId}" title="Go on movie page">
-                    <img src=${poster} alt="Movie poster" width="250" height="300">
-                    <h4>${title}</h4>
-                    <p>${year}</p>
+                <a href="view.html?_id=${movieId}" title="More info about this movie">
+                    <img src=${poster} alt="Movie poster">
+                    <div class="movie-overlay">
+                        <h4>${title}</h4>
+                        <p>${year}</p>
+                    </div>
                 </a>
             </div>
         `
@@ -57,16 +59,16 @@ function sortYearDown(b, a) {
     return 0;
 }
 function sortTitleUp(a, b) {
-    if (a.naziv.trim() < b.naziv.trim())
+    if (a.naziv.toLowerCase().trim() < b.naziv.toLowerCase().trim())
       return -1;
-    if (a.naziv.trim() > b.naziv.trim())
+    if (a.naziv.toLowerCase().trim() > b.naziv.toLowerCase().trim())
       return 1;
     return 0;
 }
 function sortTitleDown(b, a) {
-    if (a.naziv.trim() < b.naziv.trim())
+    if (a.naziv.toLowerCase().trim() < b.naziv.toLowerCase().trim())
       return -1;
-    if (a.naziv.trim() > b.naziv.trim())
+    if (a.naziv.toLowerCase().trim() > b.naziv.toLowerCase().trim())
       return 1;
     return 0;
 }

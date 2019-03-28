@@ -17,7 +17,7 @@ function displayMovies(moviesArr) {
 
     let fill = ``;
 
-    for (let i = 0; i < 6; i += 1) {
+    for (let i = 0; i < 10; i += 1) {
         
         year = moviesArr[i].godina;
         title = moviesArr[i].naziv;
@@ -26,10 +26,12 @@ function displayMovies(moviesArr) {
 
         fill += `
             <div class="movie">
-                <a href="single-movie.html?_id=${movieId}" title="Go on movie page">
-                    <img src=${poster} alt="Movie poster" width="250" height="300">
-                    <h4>${title}</h4>
-                    <p>${year}</p>
+                <a href="movie/view.html?_id=${movieId}" title="More info about this movie">
+                    <img src=${poster} alt="Movie poster">
+                    <div class="movie-overlay">
+                            <h4>${title}</h4>
+                            <p>${year}</p>
+                    </div>
                 </a>
             </div>
         `

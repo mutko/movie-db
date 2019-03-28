@@ -8,16 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
     
 </head>
 <body>
 
-    <section class="top-bar">
+    <!-- <section class="top-bar">
         <div class="container">
             <div class="row">
                 <div class="col-10">
@@ -35,38 +31,43 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Page Header -->
     <header class="page-header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="../index.html">Home</a>
+        <nav class="page-nav">
+            <ul class="nav-list">
+                <li class="active">
+                    <a href="../index.html" title="App homepage">Home
+                        <i class="fas fa-home"></i>
+                    </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="movie/search.html" title="Search our database">Search</a>
+                <li>
+                    <a href="movie/search.html" title="Search our database">All movies
+                        <i class="fas fa-search"></i>
+                    </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="movie/add.html" title="Add movie into our database">Add</a>
+                <li>
+                    <a href="movie/add.html" title="Add movie into our database">Add movie
+                        <i class="fas fa-plus"></i>
+                    </a>
                 </li>
             </ul>
         </nav>
     </header><!-- Page Header -->
 
-    <div class="jumbotron jumbotron-fluid">
+    <section class="app-info">
         <div class="container">
-            <h1 class="display-4">Fluid jumbotron</h1>
-            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-        </div>
-    </div>
+            <h1>App features</h1>
+            <p>Feauture 1</p>
+            <p>Feauture 2</p>
+       </div>
+    </section>
     
     <section class="latest-movies">
         <div class="container">
             <h3>Latest movies in our collection</h3>
-            <div id="latest-movies" class="row">
-               
-            </div>
+            <div id="latest-movies" class="movies-list"></div>
         </div>
     </section>
 
@@ -81,7 +82,7 @@
 
     <!-- My JS -->
     <script src="js/main.js"></script>
-    <script src="js/not.js"></script>
+    <!-- <script src="js/not.js"></script> -->
 
 </body>
 </html>
