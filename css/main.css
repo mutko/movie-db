@@ -1,3 +1,14 @@
+/*
+    colors:
+
+    #501f3a     dark bordo
+    #cb2d6f     pink-purple
+    #ccc        light-gray
+    #14a098     light-bluegreen
+    #0f292f     dark-gray
+
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700');
 
 :root {
@@ -8,9 +19,13 @@
     box-sizing: inherit;
     font-family: inherit;
 }
+html {
+    height: 100%;
+}
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 a {
     text-decoration: none;
@@ -18,7 +33,7 @@ a {
 }
 .container {
     margin: 0 auto;
-    padding: 0 1em;
+    padding: 0 2em;
 } 
 img {
     width: 100%;
@@ -26,12 +41,57 @@ img {
     object-fit: cover;
 }
 /* Page Header */
+.page-nav {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 20;
+}
 .nav-list {
     list-style: none;
     padding: 0;
-    display: flex;
+    margin: 0;
+    text-align: center;
+    display: inline-block;
 }
-
+.nav-link {
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+.nav-icon{
+    width: 60px;
+    padding: 15px;
+    background-color: #14a098;
+}
+/*
+.link-text {
+    padding-left: 10px;
+    color: #000;
+    margin-left: -999px;
+    transition: all .3s;
+    z-index: -10;
+}
+.nav-link:hover .link-text {
+    margin-left: 0;
+}
+*/
+.nav-link:hover .nav-icon {
+    background-color: #cb2d6f;
+}
+.active {
+    background-color: #cb2d6f;
+}
+.login {
+    margin-bottom: 40px;
+    display: none;
+}
+.notification {
+    margin-top: 40px;
+    display: none;
+}
 
 /* Latest movies */
 .movies-list {
