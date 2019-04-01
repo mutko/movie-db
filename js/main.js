@@ -29,8 +29,10 @@ function displayMovies(moviesArr) {
                 <a href="movie/view.html?_id=${movieId}" title="More info about this movie">
                     <img src=${poster} alt="Movie poster">
                     <div class="movie-overlay">
+                        <div class="text-wrapper">
                             <h4>${title}</h4>
                             <p>${year}</p>
+                        </div>
                     </div>
                 </a>
             </div>

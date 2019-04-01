@@ -12,42 +12,57 @@
     
 </head>
 <body>
-
-    <section class="top-bar">
-        <div class="container">
-            <div class="row">
-                <div class="col-10">
-                    <button id="notification">notification</button>
                     
-                    <form action="" id="login">
-                        <input id="user" type="text" placeholder="Username" value="admin" required>
-                        <input id="password" type="password" placeholder="Password" required>
-                        <button id="submit-login" type="submit">Submit</button>
-                    </form>
+    <form action="" id="login">
+        <input id="user" type="text" placeholder="Username" value="admin" required>
+        <input id="password" type="password" placeholder="Password" required>
+        <button id="submit-login" type="submit">Submit</button>
+    </form>
 
-                </div>
-                <div class="col-2">
-                    <a href="#" title="Check code for this app on github" target="_blank">Git</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- Vertical page nav -->
+    <nav class="page-nav">
+        <ul class="nav-list">
+            <li class="login">
+                <a class="nav-link" href="#" title="Login">
+                    <i class="nav-icon fas fa-user-tie"></i> 
+                    <!-- <span class="link-text">Home</span>  -->
+                </a> 
+            </li>
+            <li>
+                <a class="nav-link" href="../index.html" title="App homepage">
+                    <i class="nav-icon fas fa-home"></i> 
+                    <!-- <span class="link-text">Home</span>  -->
+                </a> 
+            </li>
+            <li>
+                <a class="nav-link" href="search.html" title="Search our database">
+                    <i class="nav-icon fas fa-film active"></i> 
+                    <!-- <span class="link-text">All movies</span>   -->
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" href="add.html" title="Add movie into our database">
+                    <i class="nav-icon far fa-file-video"></i> 
+                    <!-- <span class="link-text">Add movie</span> -->
+                </a>
+            </li>
+            <li class="git">
+                <a class="nav-link" href="#" title="Check my work on github" target="_blank">
+                    <i class="nav-icon fab fa-github"></i> 
+                    <!-- <span class="link-text">My Github</span> -->
+                </a>
+            </li>
+            <li class="notification">
+                <a class="nav-link" href="#" title="New movie added in database">
+                    <i class="nav-icon fas fa-exclamation"></i> 
+                    <!-- <span class="link-text">My Github</span> -->
+                </a>
+            </li>
+        </ul>
+    </nav>
     <!-- Page Header -->
     <header class="page-header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="../index.html">Home</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="search.html" title="Search our database">Search <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="add.html" title="Add movie into our database">Add</a>
-                </li>
-            </ul>
-        </nav>
+      
     </header><!-- Page Header -->
 
     <div class="jumbotron jumbotron-fluid">
@@ -72,15 +87,14 @@
                 <button id="titleUp">Gore</button> 
                 <button id="titleDown">Dole</button>
             </p>
-            <section  class="all-movies">
-                <div class="container">
-                    <div id="all-movies" class="movies-list"></div>
-                </div>
-            </section>
         </div>
     </div>
     
-    
+    <section  class="all-movies">
+        <div class="container">
+            <div id="all-movies" class="movies-list"></div>
+        </div>
+    </section>
 
 
     <footer class="page-footer">
