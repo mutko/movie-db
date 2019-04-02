@@ -7,50 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        
+   
     <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css">
     
 </head>
 <body>
-
-    <section class="top-bar">
-        <div class="container">
-            <div class="row">
-                <div class="col-10">
-                    <button id="notification">notification</button>
-                    <button> Login</button>
+    <div class="banner">
+        <!-- Page Header -->
+        <header class="page-header">
+            <div class="container">  
+    
+                <div class="logo">
+                    <p><i class="fas fa-film"></i> branko's movie app</p>
                 </div>
-                <div class="col-2">
-                    <a href="#" title="Check code for this app on github" target="_blank">Git</a>
+                <div class="btn-container" id="toggle">
+                    <i class="fas fa-bars fa-2x"></i>
+                </div>
+                
+                <div class="nav-overlay" id="nav-overlay"> <!-- class="overlay" id="overlay" -->
+                    <nav class="page-nav"> <!-- overlaymenu -->
+                        <ul class="nav-list">
+                            <li>
+                                <a class="nav-link" href="../index.html" title="App homepage">Home</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="search.html" title="Search our database">Movies</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="add.html" title="Add movie into our database">Add movie</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+    
+            </div>
+        </header><!-- Page Header -->
+
+        <div class="more-info">
+            <div class="container">
+                <div id="single-movie"></div>
+                <div class="user-reviews">
+                    <h3>Comments</h3>
+                    <div id="user-reviews"></div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Page Header -->
-    <header class="page-header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="../index.html">Home</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="search.html" title="Search our database">Search <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="add.html" title="Add movie into our database">Add</a>
-                </li>
-            </ul>
-        </nav>
-    </header><!-- Page Header -->
-                  
-    <div class="dekor" id="film"></div>
-
-
-    <div id="user-reviews"></div>
+    </div>
 
     <footer class="page-footer">
         <div class="container">
@@ -60,6 +62,7 @@
         </div>
     </footer>
 
+    <script src="../js/nav.js"></script>
     <script src="../js/view.js"></script>
     <script src="../js/not.js"></script>
 

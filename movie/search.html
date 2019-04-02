@@ -12,102 +12,88 @@
     
 </head>
 <body>
-                    
-    <form action="" id="login">
-        <input id="user" type="text" placeholder="Username" value="admin" required>
-        <input id="password" type="password" placeholder="Password" required>
-        <button id="submit-login" type="submit">Submit</button>
-    </form>
 
-    <!-- Vertical page nav -->
-    <nav class="page-nav">
-        <ul class="nav-list">
-            <li class="login">
-                <a class="nav-link" href="#" title="Login">
-                    <i class="nav-icon fas fa-user-tie"></i> 
-                    <!-- <span class="link-text">Home</span>  -->
-                </a> 
-            </li>
-            <li>
-                <a class="nav-link" href="../index.html" title="App homepage">
-                    <i class="nav-icon fas fa-home"></i> 
-                    <!-- <span class="link-text">Home</span>  -->
-                </a> 
-            </li>
-            <li>
-                <a class="nav-link" href="search.html" title="Search our database">
-                    <i class="nav-icon fas fa-film active"></i> 
-                    <!-- <span class="link-text">All movies</span>   -->
-                </a>
-            </li>
-            <li>
-                <a class="nav-link" href="add.html" title="Add movie into our database">
-                    <i class="nav-icon far fa-file-video"></i> 
-                    <!-- <span class="link-text">Add movie</span> -->
-                </a>
-            </li>
-            <li class="git">
-                <a class="nav-link" href="#" title="Check my work on github" target="_blank">
-                    <i class="nav-icon fab fa-github"></i> 
-                    <!-- <span class="link-text">My Github</span> -->
-                </a>
-            </li>
-            <li class="notification">
-                <a class="nav-link" href="#" title="New movie added in database">
-                    <i class="nav-icon fas fa-exclamation"></i> 
-                    <!-- <span class="link-text">My Github</span> -->
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <!-- Page Header -->
-    <header class="page-header">
-      
-    </header><!-- Page Header -->
 
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1>Fluid jumbotron</h1>
-            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-            <p>
-                <input type="text" id="search" placeholder="Movie title">
+
+    <div class="banner alt-banner">
+        <!-- Page Header -->
+        <header class="page-header">
+            <div class="container">  
+    
+                <div class="logo">
+                    <p><i class="fas fa-film"></i> branko's movie app</p>
+                </div>
+                <div class="btn-container" id="toggle">
+                    <i class="fas fa-bars fa-2x"></i>
+                </div>
                 
-                <select name="num-to-display" id="num-to-display">
-                    <option value="10">10</option>
-                    <option value="20" selected>20</option>
-                    <option value="40">40</option>
-                    <option value="all">All</option>
-                </select>
-            </p>
-            <p>Sort by year 
-                <button id="yearUp">Gore</button> 
-                <button id="yearDown">Dole</button>
-            </p>
-            <p>Sorb by title 
-                <button id="titleUp">Gore</button> 
-                <button id="titleDown">Dole</button>
-            </p>
+                <div class="nav-overlay" id="nav-overlay"> <!-- class="overlay" id="overlay" -->
+                    <nav class="page-nav"> <!-- overlaymenu -->
+                        <ul class="nav-list">
+                            <li>
+                                <a class="nav-link" href="../index.html" title="App homepage">Home</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="search.html" title="Search our database">Movies</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="add.html" title="Add movie into our database">Add movie</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header><!-- Page Header -->
+        <div class="container">
+            <form action="" id="login">
+                <input class="input-field" id="user" type="text" placeholder="Username" value="admin" required>
+                <input class="input-field" id="password" type="password" placeholder="Password" required>
+                <button id="submit-login" type="submit" class="btn">Submit</button>
+            </form>
+            <h1>Movie listing</h1>
         </div>
     </div>
-    
-    <section  class="all-movies">
+
+    <section class="all-movies">
         <div class="container">
+            <div class="sort">
+                <div>
+                    <button class="btn" id="yearUp">0-9 <i class="fas fa-angle-up"></i></button> 
+                    <button class="btn" id="yearDown">0-9 <i class="fas fa-angle-down"></i></button>
+                    <button class="btn" id="titleUp">A-Z <i class="fas fa-angle-up"></i></button> 
+                    <button class="btn" id="titleDown">A-Z <i class="fas fa-angle-down"></i></button>
+                </div>
+                <input class="input-field" type="text" id="search" placeholder="Movie title">
+            </div>
             <div id="all-movies" class="movies-list"></div>
         </div>
     </section>
 
-
     <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <p>Feel free to comment app and send sugestions</p>
+            <div class="container">
+                <div class="footer-content">
+                    <ul class="footer-nav">
+                        <li>
+                            <a href="../index.html" title="App homepage">Home</a>
+                        </li>
+                        <li>
+                            <a href="search.html" title="Search our database">Movies</a>
+                        </li>
+                        <li>
+                            <a href="add.html" title="Add movie into our database">Add movie</a>
+                        </li>
+                    </ul>
+                    <a href="https://github.com/mutko" title="My github repos">Check my work on github <i class="fab fa-github"></i></a>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+
 
     <!-- My JS -->
+    <script src="../js/nav.js"></script>
     <script src="../js/search.js"></script>
     <script src="../js/not.js"></script>
     <script src="../js/delete.js"></script>
+
 </body>
 </html>
