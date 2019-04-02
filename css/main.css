@@ -149,7 +149,8 @@ ul {
 /* Latest movies */
 .latest-movies,
 .all-movies,
-.add-section {
+.add-section,
+.more-info {
     padding: 4em 0;
     text-align: center;
     background: #020d18;
@@ -320,6 +321,9 @@ ul {
 }
 /*******
 ******** View page */
+.more-info {
+    text-align: left;
+}
 .single-movie {
     display: flex;
     flex-direction: column;
