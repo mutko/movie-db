@@ -12,14 +12,20 @@
     
 </head>
 <body>
-
+    <div class="alert" id="alert">
+        <div class="container">
+            <p><i class="fas fa-info"></i> Dodat je novi film u bazu <span id="close" class="fas fa-times close"></span></p>
+        </div>
+    </div>
     <div class="banner">
         <!-- Page Header -->
         <header class="page-header">
             <div class="container">  
     
                 <div class="logo">
-                    <p><i class="fas fa-film"></i> branko's movie app</p>
+                    <a href="index.html" title="App homepage">
+                        <p><i class="fas fa-film"></i> branko's movie app</p>
+                    </a>
                 </div>
                 <div class="btn-container" id="toggle">
                     <i class="fas fa-bars fa-2x"></i>
@@ -45,11 +51,11 @@
         </header><!-- Page Header -->
         <div class="container">
             <h1>Front End App using movie database API </h1>
-            
-            <h3>App features</h3>
-            <p>Welcome page with 10 latest added movies in database</p>
-            <p>Display movies page with list of all movies, search field for finding movie by title and buttons for movie sort by year and title</p>
-            <p>Add movie page with poster preview</p>
+            <p>Fetch all movies (GET) and display them with search option and sort by year and title</p>
+            <p>Display only 10 latest added movies in database</p>
+            <p>Add movie in database with POST method</p> 
+            <p>Push notifications with WebSocket protocol</p>
+            <p>Delete movie with DELETE method (must login with admin username)</p>
             <p>Single movie page with additional info from Open Movie Database API</p>
        </div>
     </div>
@@ -57,6 +63,7 @@
     <section class="latest-movies">
         <div class="container">
             <h3>Most recent additions</h3>
+            <img src="img/loader.gif" alt="Loading movies" width="75" class="loader" id="loader">
             <div id="latest-movies" class="movies-list"></div>
         </div>
     </section>

@@ -6,7 +6,8 @@ const yearDown = id('yearDown');
 const titleUp = id('titleUp');
 const titleDown = id('titleDown');
 const url = 'https://baza-filmova.herokuapp.com/filmovi/';
-const placeholder = document.getElementById('all-movies');
+const placeholder = id('all-movies');
+const loader = id('loader');
 
 let year;
 let title;
@@ -14,15 +15,14 @@ let poster;
 let movieId;
 let allMovies = [];
 
-// let select = id('num-to-display');
-// let num = +select.value;
-
 function displayMovies(moviesArr) {
 
     let fill = ``;
 
     for (let i = 0; i < moviesArr.length; i += 1) {
         
+        loader.style.display = 'none';
+
         year = moviesArr[i].godina;
         title = moviesArr[i].naziv;
         poster = moviesArr[i].slika;
@@ -78,14 +78,12 @@ function sortTitleDown(b, a) {
 fetch(url)
     .then( reply => reply.json() )
     .then( reply => {
-        console.log(reply);
         allMovies = reply;
         displayMovies(allMovies);        
     })
 
 searchField.addEventListener('input', () => {
     let searchResults = allMovies.filter( film => film.naziv.toLowerCase().includes(searchField.value.toLowerCase() ));
-    console.log(searchResults);
     displayMovies(searchResults);
 });
 yearUp.addEventListener('click', () => {
@@ -104,15 +102,3 @@ titleDown.addEventListener('click', () => {
     allMovies.sort(sortTitleDown);
     displayMovies(allMovies);
 });
-
-// select.addEventListener('change', () => {
-
-//     num = +select.value;
-//     if (select.value === 'all') {
-//         num = allMovies.length;
-//     }
-//     console.log(num)
-//     // displayMovies(num)
-// });
-
-//  .catch(reply => console.log('There is error somewhere!') )

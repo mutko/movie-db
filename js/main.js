@@ -2,7 +2,8 @@ const id = sel => document.getElementById(sel);
 
 const url = 'https://baza-filmova.herokuapp.com/filmovi/';
 
-const placeholder = document.getElementById('latest-movies');
+const placeholder = id('latest-movies');
+const loader = id('loader');
 
 let year;
 let title;
@@ -17,6 +18,8 @@ function displayMovies(moviesArr) {
 
     let fill = ``;
 
+    loader.style.display = 'none';
+    
     for (let i = 0; i < 10; i += 1) {
         
         year = moviesArr[i].godina;
@@ -53,13 +56,9 @@ function sortAddedDown(b, a) {
     return 0;
 }
 
-
 fetch(url)
     .then( reply => reply.json() )
     .then( reply => {
-        console.log(reply);
         allMovies = reply;
         displayMovies(allMovies);        
     })
-
- //  .catch(reply => console.log('There is error somewhere!') )

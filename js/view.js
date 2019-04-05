@@ -2,7 +2,7 @@ const id = sel => document.getElementById(sel);
 
 const placeholder = id('single-movie');
 const reviews = id('user-reviews');
-
+const loader = id('loader');
 const url = "https://baza-filmova.herokuapp.com/pokazi-film/";
 const apikey = '2f0dbac0';
 
@@ -13,7 +13,8 @@ let slika;
 let idFilma = location.search.substring(5);
 
 function displayMovie(podatak) {
-    console.log(podatak);
+    
+    loader.style.display = 'none';
 
     godina = podatak.godina;
     naziv = podatak.naziv;
@@ -58,12 +59,11 @@ function displayComments(movie) {
 }
 function displayMoreInfo(omdbInfo) {
     if (omdbInfo.Response === 'False') {
-        id('movie').innerHTML += `
+        id('content').innerHTML += `
             <p>Nema dodatnih informacija o filmu</p>
         `;
     } else {
         let omdb = omdbInfo;
-        console.log(omdb);
         let plot = omdb.Plot;
         let runtime = omdb.Runtime;
         let genre = omdb.Genre;

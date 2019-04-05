@@ -30,7 +30,6 @@ submitLogin.addEventListener('click', function(e) {
 });
 
 function deleteMovie(elem) {
-    console.log(elem)
     let warning = confirm('Are you sure? This action can NOT be undone!');
 
     if (warning) {
@@ -38,7 +37,6 @@ function deleteMovie(elem) {
         let link = elem.target.nextElementSibling;
         let movieId = link.href.substring(link.href.length - 24);
 
-        console.log(movieId)
         fetch('https://baza-filmova.herokuapp.com/obrisi-film/', {
             method: 'delete',
             headers: {'Content-Type': 'application/json'},
@@ -46,7 +44,6 @@ function deleteMovie(elem) {
         })
             .then( reply => reply.text() )
             .then( reply => {
-                console.log(reply);
                 alert('The movies is successfully deleted!');
             })
 

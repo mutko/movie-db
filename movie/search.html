@@ -13,7 +13,11 @@
 </head>
 <body>
 
-
+    <div class="alert" id="alert">
+        <div class="container">
+            <p><i class="fas fa-info"></i> Dodat je novi film u bazu <span id="close" class="fas fa-times close"></span></p>
+        </div>
+    </div>
 
     <div class="banner alt-banner">
         <!-- Page Header -->
@@ -21,7 +25,9 @@
             <div class="container">  
     
                 <div class="logo">
-                    <p><i class="fas fa-film"></i> branko's movie app</p>
+                    <a href="../index.html" title="App homepage">
+                        <p><i class="fas fa-film"></i> branko's movie app</p>
+                    </a>
                 </div>
                 <div class="btn-container" id="toggle">
                     <i class="fas fa-bars fa-2x"></i>
@@ -65,6 +71,7 @@
                 </div>
                 <input class="input-field" type="text" id="search" placeholder="Movie title">
             </div>
+            <img src="../img/loader.gif" alt="Loading movies" width="75" class="loader" id="loader">
             <div id="all-movies" class="movies-list"></div>
         </div>
     </section>

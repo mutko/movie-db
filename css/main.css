@@ -48,8 +48,24 @@ ul {
     margin: 0 auto;
     padding: 0 1em;
 } 
-
-
+.loader {
+    text-align: center;
+}
+.alert {
+    padding: 10px 0;
+    color: #dd003f;
+    display: none;
+}
+.alert p {
+    margin: 0;
+}
+.close {
+    float: right;
+    cursor: pointer;
+}
+.active {
+    display: block;
+}
 /* Page Header */
 .page-header {
     padding: 15px 0;
@@ -136,7 +152,9 @@ ul {
 .nav-list > li > a:hover {
     color: #dd003f;
 }
-
+.logo a {
+    color: #feffff;
+}
 
 
 /* Info */
@@ -145,6 +163,10 @@ ul {
     padding-bottom: 2em;
     background: url('../img/banner-bg.jpg') no-repeat;
     background-size: cover;
+}
+.banner h1 {
+    text-align: center;
+    text-transform: uppercase;
 }
 /* Latest movies */
 .latest-movies,
@@ -155,6 +177,9 @@ ul {
     text-align: center;
     background: #020d18;
     color: #feffff;
+}
+.latest-movies h3 {
+    padding-bottom: 40px;
 }
 .movies-list {
     display: grid;
@@ -395,7 +420,6 @@ ul {
     }
     .add-movie {
         display: flex;
-        align-items: center;
     }
     .add-movie div {
         flex: 1 1 50%;
@@ -405,6 +429,11 @@ ul {
     }
     .single-movie {
         flex-direction: row;
+        padding: 0;
+    }
+    .single-movie img {
+        width: 300px;
+        align-self: center;
     }
     .content {
         margin-left: 50px;
